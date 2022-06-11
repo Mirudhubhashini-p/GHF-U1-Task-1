@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Reg Form</title>    
+    <style type="text/css">    
+h2
+{
+text-align:center;
+}
+body
+{
+font-family: Arial, Helvetica, sans-serif;
+background-color:white;
+}
+.container
+{
+margin:30px;
+background-color:white;
+padding:30px 40px 30px;
+border:none;
+outline:none;
+}
+input[type=text],input[type=password],input[type=number]
+{
+width:100%;
+padding:15px 0 22px;
+border:none;
+}
+input[type=text]:focus
+,input[type=password]:focus
+{
+background-color: #d9d9d9;
+}
+.Registerbtn
+{
+width:100%;
+padding:20px;
+background-color:#00bfff;
+color:black;
+border:none;
+}
+.Registerbtn:hover
+
+{
+opacity:0.8;
+}
+#Country
+{
+width:100%;
+padding:15px 22px;
+border:none;
+}
+.registercontainer
+{
+padding:20px;
+}
+  </style>    
+    <script>    
+        function validate() {    
+            var fname = document.reg_form.fname;    
+            var lname = document.reg_form.lname;    
+            var address = document.reg_form.address;    
+            var gender = document.reg_form.gender;    
+            var mobile = document.reg_form.mobile;
+            var country =document.reg_form.country;
+            var Password1 =document.reg_form.Password1;
+            var Password2 =document.reg_form.Password2;
+              
+    
+            if (fname.value.length <= 0) {    
+                alert(" First Name is required");    
+                fname.focus();    
+                return false;    
+            }    
+            if (lname.value.length <= 0) {    
+                alert("Last Name is required");    
+                lname.focus();    
+                return false;    
+            }    
+               
+            if (gender.value.length <= 0) {    
+                alert("Gender is required");    
+                gender.focus();    
+                return false;    
+            }    
+               
+             if (address.value.length <= 0) {    
+                alert("Address is required");    
+                address.focus();    
+                return false;    
+            } 
+            if (mobile.value.length <= 0){    
+                alert("Mobile number is required");    
+                mobile.focus();    
+                return false;    
+            }  
+            
+            if (country.value.length <= 0) {    
+                alert("Country is required");    
+                country.focus();    
+                return false;    
+            }  
+            if(Password1!=Password2)
+            {
+            alert("Password is not matching");    
+              Password.focus();    
+               return false; 
+                }
+            return false;    
+        }    
+    </script>    
+</head>    
+<body>    
+       
+    <form method="" action="" name="reg_form" onsubmit="return validate()">    
+    <div class="container">
+<h2><b>Register form</b></h2>
+<label for="fname"><b>First Name</b></label>
+<input type="text" Placeholder="Enter First Name" name="fname">
+<label for="lname"><b>Last Name</b></label>
+<input type="text" Placeholder="Enter Last Name" name="lname">
+<label for="gender"><b>Gender</b><br></label>
+<input type="radio" id="male" value="Male" name="gender">
+<label for="Male">Male</label>
+<input type="radio" id="female" value="female" name="gender">
+<label for="female">female</label>
+<br>
+<label for="Password"><b>Password</b></label>
+<input type="Password" Placeholder="Enter Password" name="Password1" >
+<label for="Confirm password"><b>Confirm Password</b></label>
+<input type="Password" Placeholder="Enter Confirm Password" name="Password2" >
+<label for="mobile"><b>Mobile Number</b></label>
+<input type="Number" Placeholder="Enter Mobile Number" name="mobile" >
+<br>
+<label for="address"><b>Address</b></label>
+<input type="text"Placeholder=""name="address">
+<label for="Country"><b>Country</b></label>
+<select id="Country" name="country">
+<option value="Choose a country">Choose a Country</option>
+<option value="us">United States</option>
+<option value="ja">Japan</option>
+<option value="ge">Germany</option>
+<option value="sw">Switzerland</option>
+<option value="au">Australia</option>
+<option value="in">India</option>
+<option value="Nz">New Zealand</option>
+<option value="uk">United Kingdom</option>
+</select>
+<label class="container"></label>
+<input type="checkbox" checked="checked">I agree to the
+Terms/conditions
+<span class="checkmark"></span>
+<div class="registercontainer"> 
+<button type="submit" class=Registerbtn><b>Register </b>
+</button>
+</div>
+</div>          
+</form>    
+</body>    
+</html> 
